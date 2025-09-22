@@ -7,3 +7,4 @@ missingno
 mlflow<3
 dagshub
 plotly
+lightgbm
