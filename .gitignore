@@ -209,7 +209,7 @@ __marimo__/
 # Virtual environment
 beta
 # Ignore only outer data folder
-/data/
+
 
 # But keep src/data
 !src/data/
