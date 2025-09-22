@@ -213,3 +213,4 @@ beta
 
 # But keep src/data
 !src/data/
+/run_information.json
