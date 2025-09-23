@@ -17,7 +17,7 @@ def change_column_names(data: pd.DataFrame):
             "weatherconditions": "weather",
             "road_traffic_density": "traffic",
             "city": "city_type",
-            "time_taken(min)": "time_taken"
+            # "time_taken(min)": "time_taken"
         }, axis=1)
     )
 
@@ -71,7 +71,7 @@ def clean_data(dataframe):
                 festival=lambda x: x['festival'].str.strip().str.lower(),
                 city_type=lambda x: x['city_type'].str.strip().str.lower(),
                 multiple_deliveries=lambda x: x['multiple_deliveries'].astype(float),
-                time_taken=lambda x: (x['time_taken'].str.replace("(min) ", "").astype(int)),
+                # time_taken=lambda x: (x['time_taken'].str.replace("(min) ", "").astype(int)),
                 distance_km=lambda x: x.apply(
                     lambda row: geodesic(
                         (row["restaurant_latitude"], row["restaurant_longitude"]),
@@ -118,12 +118,12 @@ def perform_data_cleaning(data: pd.DataFrame, saved_data_path="clean_data.csv"):
         .pipe(clean_data)
         .pipe(create_distance_type)
     )
-    cleaned_data.to_csv(saved_data_path, index=False)
+    # cleaned_data.to_csv(saved_data_path, index=False)
     return cleaned_data.dropna()
 
-if __name__ == "__main__":
-    DATA_PATH = "notebooks/swiggy.csv"
-    data = pd.read_csv(DATA_PATH)
-    print('Data loaded successfully')
-    cleaned = perform_data_cleaning(data)
-    print('Cleaned data saved successfully!')
+# if __name__ == "__main__":
+#     DATA_PATH = "notebooks/swiggy.csv"
+#     data = pd.read_csv(DATA_PATH)
+#     print('Data loaded successfully')
+#     cleaned = perform_data_cleaning(data)
+#     print('Cleaned data saved successfully!')
