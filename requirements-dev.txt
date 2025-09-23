@@ -15,3 +15,4 @@ dvc[s3]
 dagshub
 lightgbm
 joblib
+pytest
