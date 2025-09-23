@@ -1,8 +1,17 @@
+# numpy
+# pandas
+# scikit-learn
+# mlflow<3
+# dvc
+# dagshub
+# lightgbm
+# joblib
+# dvc[s3]
 numpy
 pandas
 scikit-learn
 mlflow<3
-dvc
+dvc[s3]
 dagshub
 lightgbm
 joblib
